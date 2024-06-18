@@ -1,0 +1,33 @@
+<configuration xmlns="http://logging.apache.org/log4php/">
+	<appender name="queryAppender" class="LoggerAppenderFile">
+		<param name="file" value="logs/query.log"></param>
+		<param name="append" value="true"></param>
+		<layout class="LoggerLayoutPattern">
+			<param name="conversionPattern" value="%message%newline"></param>
+		</layout>
+	</appender>
+	<appender name="exceptionAppender" class="LoggerAppenderFile">
+		<param name="file" value="logs/exception.log"></param>
+		<param name="append" value="true"></param>
+		<layout class="LoggerLayoutPattern">
+			<param name="conversionPattern" value="%date{Y-m-d H:i:s}: %message%newline"></param>
+		</layout>
+	</appender>
+	<appender name="accessAppender" class="LoggerAppenderFile">
+		<param name="file" value="logs/access.log"></param>
+		<param name="append" value="true"></param>
+		<layout class="LoggerLayoutPattern">
+			<param name="conversionPattern" value="%date{Y-m-d H:i:s}: %message%newline"></param>
+		</layout>
+	</appender>
+	<logger name="queryLogger">
+		<appender_ref ref="queryAppender"></appender_ref>
+		<level value="trace"></level>
+	</logger>
+	<logger name="exceptionLogger">
+		<appender_ref ref="exceptionAppender"></appender_ref>
+	</logger>
+	<logger name="accessLogger">
+		<appender_ref ref="accessAppender"></appender_ref>
+	</logger>
+</configuration>

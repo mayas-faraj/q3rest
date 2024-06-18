@@ -1,0 +1,2 @@
+2023-02-12 08:45:32: read error (Expression #10 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'store_new.coupons.is_infinity' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by)
+2023-02-12 08:45:33: read error (Expression #7 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'store_new.stores.name' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by)
